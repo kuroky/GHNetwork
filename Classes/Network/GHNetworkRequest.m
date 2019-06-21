@@ -52,17 +52,21 @@
     return [YTKNetworkConfig sharedConfig].baseUrl;
 }
 
-- (void)em_requestWithCompletion:(void (^)(GHNetworkResponse *response))completion {
+- (void)gh_requestWithCompletion:(void (^)(GHNetworkResponse *response))completion {
     self.startInterval = CACurrentMediaTime();
     [self startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
         self.endInterval = CACurrentMediaTime();
-        GHNetworkResponse *response = [GHNetworkResponse parseNetworkData:request];
-        self.handleDelegate ? [self.handleDelegate handleNetwork:self forResponse:response] : nil;
+        GHNetworkResponse *response = nil;
+        if (self.handleDelegate) {
+            response = [self.handleDelegate handleRequest:request];
+        }
         completion ? completion(response) : nil;
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         self.endInterval = CACurrentMediaTime();
-        GHNetworkResponse *response = [GHNetworkResponse parseNetworkError:request];
-        self.handleDelegate ? [self.handleDelegate handleNetwork:self forResponse:response] : nil;
+        GHNetworkResponse *response = nil;
+        if (self.handleDelegate) {
+            response = [self.handleDelegate handleRequest:request];
+        }
         completion ? completion(response) : nil;
     }]; 
 }

@@ -8,17 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class EMBaseRequest;
-
 @interface GHNetworkResponse : NSObject
 
 /**
- 请求成功
+ 请求状态 成功或失败
  */
 @property (nonatomic, assign) BOOL isSuccess;
 
 /**
- 返回码
+ 返回码状态码
  */
 @property (nonatomic, assign) NSInteger errCode;
 
@@ -31,21 +29,5 @@
  业务数据 Dic/Arr
  */
 @property (nonatomic, strong) id respData;
-
-/**
- 解析网络数据
-
- @param request 请求request
- @return EMResponse 数据
- */
-+ (GHNetworkResponse *)parseNetworkData:(EMBaseRequest *)request;
-
-/**
- 解析网络异常时数据
- 
- @param request 请求request
- @return EMResponse 数据
- */
-+ (GHNetworkResponse *)parseNetworkError:(EMBaseRequest *)request;
 
 @end

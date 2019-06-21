@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D42EDDC6AE14F8314C912155043EEB5"
-               BuildableName = "GHNetwork"
+               BuildableName = "GHNetwork.framework"
                BlueprintName = "GHNetwork"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

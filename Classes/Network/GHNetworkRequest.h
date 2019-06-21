@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Emucoo. All rights reserved.
 //
 
-#import <YTKNetwork/YTKNetwork.h>
+#import "YTKNetwork.h"
 #import "GHNetworkResponse.h"
 
 /**
@@ -19,7 +19,7 @@
 
  @param completion response block
  */
-- (void)em_requestWithCompletion:(void (^)(GHNetworkResponse *response))completion;
+- (void)gh_requestWithCompletion:(void (^)(GHNetworkResponse *response))completion;
 
 /**
  请求开始

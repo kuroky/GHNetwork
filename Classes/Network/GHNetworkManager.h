@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class EMNetworkConfig;
+@class GHNetworkConfig;
 
 /**
  网络层配置
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param config 配置
  */
-- (void)addConfig:(EMNetworkConfig *)config;
+- (void)addConfig:(GHNetworkConfig *)config;
 
 /**
  设置异常处理代理对象 (为单例)

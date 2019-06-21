@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <GHNetwork/GHNetworkConfig.h>
+#import <GHNetwork/GHNetworkManager.h>
+#import "NetworkHandler.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +19,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    GHNetworkConfig *config = [GHNetworkConfig new];
+    config.baseUrl = @"http://192.168.16.197:9093/";
+    [[GHNetworkManager sharedManager] addConfig:config];
+    [[GHNetworkManager sharedManager] configHandleDelegate:[NetworkHandler handler]];
+    
     // Override point for customization after application launch.
     return YES;
 }

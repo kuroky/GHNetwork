@@ -16,7 +16,10 @@ PODS:
     - AFNetworking/NSURLSession
   - GHNetwork (1.0.0):
     - AFNetworking (= 3.2.1)
+    - GHNetwork/Network (= 1.0.0)
     - GHNetwork/YTKNetwork (= 1.0.0)
+  - GHNetwork/Network (1.0.0):
+    - AFNetworking (= 3.2.1)
   - GHNetwork/YTKNetwork (1.0.0):
     - AFNetworking (= 3.2.1)
 
@@ -33,7 +36,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  GHNetwork: ddde5c7531569fbc314dc942735e53234f8fa204
+  GHNetwork: e5edb7e0598fee82ae332a9451ccdfe43b50df80
 
 PODFILE CHECKSUM: 3b8b97a7e3537f24f1c50ae72335893ad5868553
 

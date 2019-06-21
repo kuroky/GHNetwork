@@ -26,16 +26,6 @@
 #import "YTKNetworkConfig.h"
 #import "YTKNetworkPrivate.h"
 #import "YTKRequest.h"
-#import "YTKBaseRequest.h"
-#import "YTKBatchRequest.h"
-#import "YTKBatchRequestAgent.h"
-#import "YTKChainRequest.h"
-#import "YTKChainRequestAgent.h"
-#import "YTKNetwork.h"
-#import "YTKNetworkAgent.h"
-#import "YTKNetworkConfig.h"
-#import "YTKNetworkPrivate.h"
-#import "YTKRequest.h"
 
 FOUNDATION_EXPORT double GHNetworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char GHNetworkVersionString[];

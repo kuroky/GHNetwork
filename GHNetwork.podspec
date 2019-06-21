@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/kuroky/GHNetwork.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "Classes/**/*.{h,m}"
+  spec.source_files  = "Classes/Network/*.{h,m}"
 
   spec.subspec "YTKNetwork" do |ss|
     ss.source_files = "Classes/YTKNetwork/*.{h,m}"

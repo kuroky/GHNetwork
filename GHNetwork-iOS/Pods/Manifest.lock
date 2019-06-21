@@ -1,0 +1,16 @@
+PODS:
+  - GHNetwork (1.0.0)
+
+DEPENDENCIES:
+  - GHNetwork (from `../`)
+
+EXTERNAL SOURCES:
+  GHNetwork:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GHNetwork: 2c98609fb600564fee37fa5efbe99792ee287275
+
+PODFILE CHECKSUM: 3b8b97a7e3537f24f1c50ae72335893ad5868553
+
+COCOAPODS: 1.7.2

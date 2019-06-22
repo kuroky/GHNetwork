@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "10.0"
 
-  spec.source       = { :git => "https://github.com/kuroky/GHNetwork.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/kuroky/GHNetwork.git", :tag => spec.version }
 
   spec.subspec "Network" do |ss|
     ss.source_files  = "Classes/Network/*.{h,m}"

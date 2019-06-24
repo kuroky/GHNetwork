@@ -6,8 +6,14 @@
 //
 
 #import "GHNetworkManager.h"
-#import "YTKNetworkConfig.h"
 #import "GHNetworkConfig.h"
+
+#if __has_include(<YTKNetwork/YTKNetworkConfig.h>)
+#import <YTKNetwork/YTKNetworkConfig.h>
+#else
+#import "YTKNetworkConfig.h"
+#endif
+
 
 @interface GHNetworkManager ()
 

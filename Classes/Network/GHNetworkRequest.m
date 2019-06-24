@@ -10,6 +10,12 @@
 #import "GHNetworkManager.h"
 #import "GHNetworkHandleDelegate.h"
 
+#if __has_include(<YTKNetwork/YTKNetworkConfig.h>)
+#import <YTKNetwork/YTKNetworkConfig.h>
+#else
+#import "YTKNetworkConfig.h"
+#endif
+
 @interface GHNetworkRequest ()
 
 @property (nonatomic, weak) id <GHNetworkHandleDelegate> handleDelegate;

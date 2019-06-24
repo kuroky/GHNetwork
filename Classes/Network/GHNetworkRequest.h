@@ -6,7 +6,12 @@
 //  Copyright © 2017年 Emucoo. All rights reserved.
 //
 
-#import "YTKNetwork.h"
+#if __has_include(<YTKNetwork/YTKNetwork.h>)
+#import <YTKNetwork/YTKRequest.h>
+#else
+#import "YTKRequest.h"
+#endif
+
 #import "GHNetworkResponse.h"
 
 /**

@@ -17,11 +17,11 @@ PODS:
   - GHNetwork (1.0.0):
     - AFNetworking (= 3.2.1)
     - GHNetwork/Network (= 1.0.0)
-    - GHNetwork/YTK (= 1.0.0)
+    - GHNetwork/YTKNetwork (= 1.0.0)
   - GHNetwork/Network (1.0.0):
     - AFNetworking (= 3.2.1)
-    - GHNetwork/YTK
-  - GHNetwork/YTK (1.0.0):
+    - GHNetwork/YTKNetwork
+  - GHNetwork/YTKNetwork (1.0.0):
     - AFNetworking (= 3.2.1)
 
 DEPENDENCIES:
@@ -37,7 +37,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  GHNetwork: 70aaff9653f5d3140c90ed1984af70215b246ca8
+  GHNetwork: 94c2e6297232bc6e85d5fe4f2f4df9bd523b1fea
 
 PODFILE CHECKSUM: 3b8b97a7e3537f24f1c50ae72335893ad5868553
 

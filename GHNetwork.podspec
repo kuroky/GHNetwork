@@ -26,13 +26,16 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/kuroky/GHNetwork.git", :tag => spec.version }
 
-  spec.subspec "Network" do |ss|
-    ss.source_files  = "Classes/Network/*.{h,m}"
+  spec.subspec "YTK" do |ss|
+    ss.source_files = "Classes/YTK/*.{h,m}"
   end
   
-  spec.subspec "YTKNetwork" do |ss|
-    ss.source_files = "Classes/YTKNetwork/*.{h,m}"
+  spec.subspec "Network" do |ss|
+    ss.source_files  = "Classes/Network/*.{h,m}"
+    ss.dependency "GHNetwork/YTK"
   end
+  
+  
   
   spec.dependency "AFNetworking", "3.2.1"
 

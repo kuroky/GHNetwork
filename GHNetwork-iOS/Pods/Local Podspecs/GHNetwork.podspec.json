@@ -25,12 +25,17 @@
   },
   "subspecs": [
     {
-      "name": "Network",
-      "source_files": "Classes/Network/*.{h,m}"
+      "name": "YTK",
+      "source_files": "Classes/YTK/*.{h,m}"
     },
     {
-      "name": "YTKNetwork",
-      "source_files": "Classes/YTKNetwork/*.{h,m}"
+      "name": "Network",
+      "source_files": "Classes/Network/*.{h,m}",
+      "dependencies": {
+        "GHNetwork/YTK": [
+
+        ]
+      }
     }
   ]
 }

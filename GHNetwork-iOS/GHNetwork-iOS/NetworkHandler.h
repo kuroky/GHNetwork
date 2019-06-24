@@ -11,6 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 基于业务层的统一处理
+ 1. Http header 传参
+ 2. Reponse 解析
+ 3. 异常code处理
+ 4. log打印
+ */
 @interface NetworkHandler : NSObject <GHNetworkHandleDelegate>
 
 + (instancetype)handler;

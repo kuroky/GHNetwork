@@ -22,6 +22,7 @@
     
     GHNetworkConfig *config = [GHNetworkConfig new];
     config.baseUrl = @"http://192.168.16.197:9093/";
+    // config.securityPolicy = []; // https设置
     [[GHNetworkManager sharedManager] addConfig:config];
     [[GHNetworkManager sharedManager] configHandleDelegate:[NetworkHandler handler]];
     

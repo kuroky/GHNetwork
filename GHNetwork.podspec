@@ -28,13 +28,12 @@ Pod::Spec.new do |spec|
 
   spec.subspec "YTKNetwork" do |ss|
     ss.source_files = "Classes/YTKNetwork/*.{h,m}"
-    #ss.public_header_files = "Classes/YTK/*.h"
   end
   
   spec.subspec "Network" do |ss|
     ss.source_files = "Classes/Network/*.{h,m}"
-    #ss.public_header_files = "Classes/Network/GHNetwork.h"
     ss.dependency "GHNetwork/YTKNetwork"
+    # dependency's requirements can't be a git, https://github.com/CocoaPods/CocoaPods/issues/8550
   end
   
   spec.dependency "AFNetworking", "3.2.1"

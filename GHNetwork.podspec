@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "基于AFNetworking和YTKNetwork的网络组件"
 
   spec.description  = <<-DESC
-    基于AFNetworking和YTKNetwork网络组件
+    基于AFNetworking和YTKNetwork网络组件框架
                    DESC
 
   spec.homepage     = "https://github.com/kuroky"

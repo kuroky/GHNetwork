@@ -36,4 +36,9 @@
  */
 @property (nonatomic, assign, readonly) CFTimeInterval endInterval;
 
+/**
+ 请求header
+ */
+@property (nonatomic, strong, readonly) NSDictionary *requestHeaders;
+
 @end

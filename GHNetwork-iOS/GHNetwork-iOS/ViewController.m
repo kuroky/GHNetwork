@@ -18,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:button];
+    button.frame = CGRectMake(100, 200, 120, 40);
+    button.backgroundColor = [UIColor lightGrayColor];
+    [button setTitle:@"Start" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(start) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)start {
     [self sendRequest];
 }
 

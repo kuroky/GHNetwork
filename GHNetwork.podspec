@@ -9,8 +9,8 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "GHNetwork"
-  spec.version      = "1.0.0"
-  spec.summary      = "网络组件"
+  spec.version      = "1.0.1"
+  spec.summary      = "基于AFNetworking和YTKNetwork的网络组件"
 
   spec.description  = <<-DESC
     基于AFNetworking和YTKNetwork网络组件

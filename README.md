@@ -1,6 +1,7 @@
 # GHNetwork
 ### 简介
-依赖[AFNetworking](https://github.com/AFNetworking/AFNetworking)(3.2.1), 继承自[YTKNetwork](https://github.com/yuantiku/YTKNetwork)的网络组件。由于`YTKNetwork`不再维护，修改了源代码。
+依赖[AFNetworking](https://github.com/AFNetworking/AFNetworking)(3.2.1), 继承自[YTKNetwork](https://github.com/yuantiku/YTKNetwork)的网络组件。由于`YTKNetwork`不再维护，修改源码适配Https可能出现的闪退
+。
 ### 安装要求
 
 ```Swift

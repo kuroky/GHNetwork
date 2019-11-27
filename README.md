@@ -4,7 +4,7 @@
 。
 ### 安装要求
 
-```Swift
+```
 iOS 11.0
 
 pod 'GHNetwork', '1.0.0'
@@ -12,7 +12,7 @@ pod 'GHNetwork', '1.0.0'
 
 ### 文件结构
 
-```Swift
+```
 "GHNetworkHandleDelegate.h" // 业务处理代理
 "GHNetworkConfig.h" // 配置
 "GHNetworkManager.h" // 管理
@@ -33,7 +33,7 @@ NetworkHandler类
 ```
 #### 启动配置
 
-```Swift
+```
 # Appdelegate.m
 #import <GHNetwork/GHNetworkConfig.h>
 #import <GHNetwork/GHNetworkManager.h>
@@ -47,7 +47,7 @@ config.baseUrl = @"http://192.168.16.197:9093/";
 ```
 #### 请求类
 
-```Swift
+```
 # TestRequest.m
 
 - (NSString *)requestUrl; // 请求url 

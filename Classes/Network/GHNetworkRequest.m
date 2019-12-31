@@ -82,13 +82,11 @@
     if (_requestHeaders) {
         return _requestHeaders;
     }
-    NSMutableDictionary *headers = [NSMutableDictionary dictionary];
-    if (self.handleDelegate && [self.handleDelegate respondsToSelector:@selector(requireHeaders)]) {
-        [self.handleDelegate.requireHeaders enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
-            [headers setValue:obj forKey:key];
-        }];
+    
+    if (self.handleDelegate.requireHeaders) {
+        _requestHeaders = self.handleDelegate.requireHeaders;
     }
-    _requestHeaders = headers;
+    
     return _requestHeaders;
 }
   

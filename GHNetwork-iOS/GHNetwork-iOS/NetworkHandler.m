@@ -63,7 +63,8 @@
 
 - (void)printLog:(GHNetworkRequest *)request
          reponse:(GHNetworkResponse *)response {
-    NSString *url = [request.baseUrl stringByAppendingString:request.requestUrl];
+    NSURL *base = [NSURL URLWithString:request.baseUrl];
+    NSString *url = [NSURL URLWithString:request.requestUrl relativeToURL:base].absoluteString;
     id para = request.requestArgument;
     if (!para) {
         para = @{};

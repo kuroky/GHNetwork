@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "GHNetwork"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "基于AFNetworking和YTKNetwork的网络组件"
 
   spec.description  = <<-DESC
@@ -36,6 +36,6 @@ Pod::Spec.new do |spec|
     # dependency's requirements can't be a git, https://github.com/CocoaPods/CocoaPods/issues/8550
   end
   
-  spec.dependency "AFNetworking", "3.2.1"
+  spec.dependency "AFNetworking", "4.0.0"
 
 end

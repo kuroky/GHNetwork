@@ -1,5 +1,10 @@
 # GHNetwork
 ### 简介
+依赖[AFNetworking](https://github.com/AFNetworking/AFNetworking), 继承自[YTKNetwork](https://github.com/yuantiku/YTKNetwork)的网络组件。由于`YTKNetwork`不再维护，修改源码适配Https可能出现的闪退。
+
+- ✅ 统一的header处理。
+- ✅ 统一的模型解析处理，Response解析基类modle。
+- ✅ 单独接口Http请求的耗时检测。
 
 ![提示](Resource/2020-10-14.png)
 
@@ -8,17 +13,17 @@
 ```
 iOS 11.0
 
-pod 'Ghidrah', :git => 'ssh://git@192.168.16.172:7999/em/ghidrah.git' // 位于本地服务器
+pod 'GHNetwork', '1.0.0'
 ```
 
 ### 文件结构
 
 ```
-"Classes/Model/" // 业务处理代理
-"Classes/HUD" // 配置
-"Classes/Category" // 管理
-"Classes/Tool" // 请求类
-"CocoaLumberjack" // 返回数据
+"GHNetworkHandleDelegate.h" // 业务处理代理
+"GHNetworkConfig.h" // 配置
+"GHNetworkManager.h" // 管理
+"GHNetworkRequest.h" // 请求类
+"GHNetworkResponse.h" // 返回数据
 ```
 ### 使用
 #### 定义处理类

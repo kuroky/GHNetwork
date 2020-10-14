@@ -74,7 +74,12 @@
     NSString *interval = [NSString stringWithFormat:@"Http请求: %.fms", requestTimer];
     
     if (response.isSuccess) {
-        NSLog(@"requestUrl: %@\n %@ \n parameters: %@\n response: %@ header: %@", url, interval, para, response, request.requestHeaderFieldValueDictionary);
+        if (requestTimer > 300) {
+            NSLog(@"requestUrl: %@\n %@ (接口响应时间超过300ms) \n parameters: %@\n response: %@ header: %@", url, interval, para, response, request.requestHeaderFieldValueDictionary);
+        }
+        else {
+            NSLog(@"requestUrl: %@\n %@ \n parameters: %@\n response: %@ header: %@", url, interval, para, response, request.requestHeaderFieldValueDictionary);
+        }
     }
     else {
         NSLog(@"requestUrl: %@\n %@ \n parameters: %@\n response: %@ header: %@", url, interval, para, response, request.requestHeaderFieldValueDictionary);

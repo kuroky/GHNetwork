@@ -12,24 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 @class GHNetworkResponse;
 @class GHNetworkRequest;
 
-/**
- networkDelegate
- */
+/// networkDelegate
 @protocol GHNetworkHandleDelegate <NSObject>
 
 @required;
-/**
- 业务逻辑处理
 
- @param request 请求request
- */
+/// 业务逻辑处理
+/// @param request 请求的 request 对象
 - (GHNetworkResponse *)handleRequest:(GHNetworkRequest *)request;
 
-/**
- 请求headers
 
- @return @{}
- */
+/// 请求headers
 - (NSDictionary <NSString *, NSString *> *)requireHeaders;
 
 @end

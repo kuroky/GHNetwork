@@ -14,7 +14,6 @@
 #import "YTKNetworkConfig.h"
 #endif
 
-
 @interface GHNetworkManager ()
 
 @property (nonatomic, weak, readwrite) id <GHNetworkHandleDelegate> handleDelegate;

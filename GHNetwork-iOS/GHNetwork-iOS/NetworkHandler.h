@@ -6,10 +6,12 @@
 //  Copyright © 2019 Emucoo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <GHNetwork/GHNetworkHandleDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class AFSecurityPolicy;
 
 /**
  基于业务层的统一处理
@@ -21,6 +23,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NetworkHandler : NSObject <GHNetworkHandleDelegate>
 
 + (instancetype)handler;
+
+/// https校验
+- (AFSecurityPolicy *)fetchSecurityPolicy;
+
+- (NSDictionary <NSString *, NSString *> *)basicHeaders;
+
+- (NSDictionary <NSString *, NSString *> *)verifyHeaders;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

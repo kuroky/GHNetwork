@@ -14,31 +14,20 @@
 
 #import "GHNetworkResponse.h"
 
-/**
- 基于YTKNetwork Request的基类
- */
+/// 基于YTKNetwork Request的基类
 @interface GHNetworkRequest : YTKRequest
 
-/**
- 发起请求
-
- @param completion response block
- */
+/// 发起请求
+/// @param completion response block
 - (void)gh_requestWithCompletion:(void (^)(GHNetworkResponse *response))completion;
 
-/**
- 请求开始
- */
+/// 请求开始时间戳
 @property (nonatomic, assign, readonly) CFTimeInterval startInterval;
 
-/**
- 请求结束
- */
+/// 请求结束时间戳
 @property (nonatomic, assign, readonly) CFTimeInterval endInterval;
 
-/**
- 请求header
- */
+/// 请求header
 @property (nonatomic, strong, readonly) NSDictionary *requestHeaders;
 
 @end

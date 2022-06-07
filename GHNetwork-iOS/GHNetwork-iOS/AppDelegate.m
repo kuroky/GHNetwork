@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     GHNetworkConfig *config = [GHNetworkConfig new];
-    config.baseUrl = @"http://192.168.16.197:9093/";
+    config.baseUrl = @"http://pony.emucoo.net";
     // config.securityPolicy = []; // https设置
     [[GHNetworkManager sharedManager] addConfig:config];
     [[GHNetworkManager sharedManager] configHandleDelegate:[NetworkHandler handler]];

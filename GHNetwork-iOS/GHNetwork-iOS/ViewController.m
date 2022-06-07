@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) UIActivityIndicatorView *hud;
+
 @end
 
 @implementation ViewController
@@ -24,6 +26,10 @@
     button.backgroundColor = [UIColor lightGrayColor];
     [button setTitle:@"Start" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(start) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    self.hud = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(230, 205, 30, 30)];
+    [self.view addSubview:self.hud];
 }
 
 - (void)start {
@@ -31,6 +37,7 @@
 }
 
 - (void)sendRequest {
+    [self.hud startAnimating];
     TestRequest *request = [TestRequest new];
     request.mobile = @"shida1";
     request.password = @"e10adc3949ba59abbe56e057f20f883e";
@@ -42,6 +49,7 @@
         else {
             NSLog(@"fail");
         }
+        [self.hud stopAnimating];
     }];
 }
 

@@ -14,15 +14,15 @@ PODS:
   - AFNetworking/Serialization (4.0.0)
   - AFNetworking/UIKit (4.0.0):
     - AFNetworking/NSURLSession
-  - GHNetwork (1.0.3):
-    - AFNetworking (= 4.0.0)
-    - GHNetwork/Network (= 1.0.3)
-    - GHNetwork/YTKNetwork (= 1.0.3)
-  - GHNetwork/Network (1.0.3):
-    - AFNetworking (= 4.0.0)
-    - GHNetwork/YTKNetwork
-  - GHNetwork/YTKNetwork (1.0.3):
-    - AFNetworking (= 4.0.0)
+  - GHNetwork (1.0.4):
+    - AFNetworking (~> 4.0.0)
+    - GHNetwork/Network (= 1.0.4)
+    - YTKNetwork (~> 3.0.6)
+  - GHNetwork/Network (1.0.4):
+    - AFNetworking (~> 4.0.0)
+    - YTKNetwork (~> 3.0.6)
+  - YTKNetwork (3.0.6):
+    - AFNetworking/NSURLSession (~> 4.0)
 
 DEPENDENCIES:
   - GHNetwork (from `../`)
@@ -30,6 +30,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - YTKNetwork
 
 EXTERNAL SOURCES:
   GHNetwork:
@@ -37,8 +38,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: d9fdf484a3c723ec3c558a41cc5754c7e845ee77
-  GHNetwork: a0492b3d0d4947cccf9d4de47b705217241af1b7
+  GHNetwork: 79853c8c49ff62042794ba1fae80b0506d3f380f
+  YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
 
-PODFILE CHECKSUM: fb9a9a95645ff86b11a37de0a1e3adfb2263346c
+PODFILE CHECKSUM: 7fcf9b567d2168faee63bb7da811f362e2c538a0
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

@@ -11,7 +11,7 @@
 @implementation TestRequest
 
 - (NSString *)requestUrl {
-    return @"/api/index/login";
+    return @"/api/user/login";
 }
 
 // 默认为Post

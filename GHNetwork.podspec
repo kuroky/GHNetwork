@@ -26,16 +26,17 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/kuroky/GHNetwork.git", :tag => spec.version }
 
-  spec.subspec "YTKNetwork" do |ss|
-    ss.source_files = "Classes/YTKNetwork/*.{h,m}"
-  end
+  #spec.subspec "YTKNetwork" do |ss|
+   # ss.source_files = "Classes/YTKNetwork/*.{h,m}"
+  #end
   
   spec.subspec "Network" do |ss|
     ss.source_files = "Classes/Network/*.{h,m}"
-    ss.dependency "GHNetwork/YTKNetwork"
+    #ss.dependency "GHNetwork/YTKNetwork"
     # dependency's requirements can't be a git, https://github.com/CocoaPods/CocoaPods/issues/8550
   end
   
-  spec.dependency "AFNetworking", "4.0.0"
+  spec.dependency "AFNetworking", "~> 4.0.0"
+  spec.dependency "YTKNetwork", "~> 3.0.6"
 
 end

@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @class YTKBaseRequest;
 @class AFSecurityPolicy;
 
+typedef void (^AFURLSessionTaskDidFinishCollectingMetricsBlock)(NSURLSession *session, NSURLSessionTask *task, NSURLSessionTaskMetrics * metrics) API_AVAILABLE(ios(10), macosx(10.12), watchos(3), tvos(10));
+
 ///  YTKUrlFilterProtocol can be used to append common parameters to requests before sending them.
 @protocol YTKUrlFilterProtocol <NSObject>
 ///  Preprocess request URL before actually sending them.
@@ -73,7 +75,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///  Whether to log debug info. Default is NO;
 @property (nonatomic) BOOL debugLogEnabled;
 ///  SessionConfiguration will be used to initialize AFHTTPSessionManager. Default is nil.
-@property (nonatomic, strong) NSURLSessionConfiguration* sessionConfiguration;
+@property (nonatomic, strong, nullable) NSURLSessionConfiguration* sessionConfiguration;
+///  NSURLSessionTaskMetrics
+@property (nonatomic, strong) AFURLSessionTaskDidFinishCollectingMetricsBlock collectingMetricsBlock API_AVAILABLE(ios(10), macosx(10.12), watchos(3), tvos(10));
 
 ///  Add a new URL filter.
 - (void)addUrlFilter:(id<YTKUrlFilterProtocol>)filter;
